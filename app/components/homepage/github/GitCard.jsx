@@ -2,7 +2,7 @@
 import { timeConverter } from "@/utils/time-converter";
 import Image from "next/image";
 import Link from "next/link";
-import { BsEyeFill, BsHeartFill, BsStarFill } from "react-icons/bs";
+import { BsEyeFill, BsStarFill } from "react-icons/bs";
 import { CgGitFork } from "react-icons/cg";
 import { ProjectImage } from "@/utils/project-image";
 import { GenerateImage } from "@/utils/genrate-image";
