@@ -1,35 +1,33 @@
-import React from 'react'
-import Link from 'next/link'
-import { FaArrowRight } from 'react-icons/fa6'
-import Image from 'next/image'
-import { personalData } from '@/utils/data/personal-data'
-import GitHubCalendar from 'react-github-calendar'
+import React from "react";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
+import Image from "next/image";
+import { personalData } from "@/utils/data/personal-data";
+import GitHubCalendar from "react-github-calendar";
 
-const Github  =async ()=> {
- 
-  const statsLinks=[
+const Github = async () => {
+  const statsLinks = [
     {
-      title:'Repositories',
-      link:'https://github-readme-stats.vercel.app/api?username=piyush7833&theme=vue-dark&show_icons=true&hide_border=true&count_private=true'
+      title: "rating",
+      link: "https://github-readme-stats.vercel.app/api?username=piyush7833&theme=vue-dark&show_icons=true&hide_border=true&count_private=true",
     },
     {
-      title:'Repositories',
-      link:'https://api.githubtrends.io/user/svg/piyush7833/repos?time_range=one_year&loc_metric=changed&theme=dark'
+      title: "languages",
+      link: "https://api.githubtrends.io/user/svg/piyush7833/repos?time_range=one_year&loc_metric=changed&theme=dark",
     },
-    // {
-    //   title:'Repositories',
-    //   link:'https://awesome-github-stats.azurewebsites.net/user-stats/piyush7833?cardType=level&preferLogin=false&theme=dark'
-    // },
+    {
+      title:'rating',
+      link:'https://awesome-github-stats.azurewebsites.net/user-stats/piyush7833?cardType=level&preferLogin=false&theme=dark'
+    },
     // {
     //   title:'Repositories',
     //   link:'https://github-readme-streak-stats.herokuapp.com/?user=piyush7833&theme=dark'
     // },
-
-  ]
-const data=await getStaticProps()
-const userData = data.props.user;
+  ];
+  const data = await getStaticProps();
+  const userData = data.props.user;
   return (
-    <div id="about" className="my-12 lg:my-16 relative">
+    <div id="about" className="my-12 lg:my-16 relative flex flex-col">
       <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
         <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
           GITHUB STATS
@@ -37,45 +35,43 @@ const userData = data.props.user;
         <span className="h-36 w-[2px] bg-[#1a1443]"></span>
       </div>
 
-    <div className="flex w-full items-start justify-center">
-      {userData.login && (
-        <div>
-          <h2>GitHub Contributions Calendar</h2>
-          <GitHubCalendar
-            username={userData.login}
-            blockSize={20}
-            blockMargin={2}
-            theme={
-              {
-                "light": [
-                  "hsl(0, 0%, 92%)",
-                  "rebeccapurple"
-                ],
-                "dark": [
-                  "hsl(0, 0%, 22%)",
-                  "hsl(225,92%,77%)"
-                ]
-              }
-            }
-          />
-        </div>
-      )}
-    </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+      <div className="grid grid-rows-2 gap-4 overflow-auto-scroll hideScrollBar w-full lg:w-[90%] xl:[95%]">
+        {userData.login && (
+          <div className="flex flex-col gap-5">
+            <h2 className="font-medium text-[#16f2b3] text-xl uppercase">
+              GitHub Contributions Calendar
+            </h2>
+            <GitHubCalendar
+              username={userData.login}
+              blockSize={20}
+              blockMargin={2}
+              theme={{
+                light: ["hsl(0, 0%, 92%)", "rebeccapurple"],
+                dark: ["hsl(0, 0%, 22%)", "hsl(225,92%,77%)"],
+              }}
+            />
+          </div>
+        )}
         <div className="flex justify-center order-1 lg:order-2">
-          {statsLinks.map((stat, index) => (
-            <Image key={index}
-            src={stat.link}
-            width={280}
-            height={280}
-            alt={stat.title}
-            className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
-            dangerouslyAllowSVG={true}
-          />
-          ))}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16">
+            {statsLinks.map((stat, index) => (
+              <div
+                className="flex justify-center order-1 lg:order-3"
+                key={index}
+              >
+                <Image
+                  src={stat.link}
+                  width={280}
+                  height={280}
+                  alt={stat.title}
+                  className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
+                  dangerouslyallowsvg
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-
 
       <div className="flex justify-center  mt-5 lg:mt-12">
         <Link
@@ -88,10 +84,10 @@ const userData = data.props.user;
         </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Github
+export default Github;
 
 export async function getStaticProps() {
   const userRes = await fetch(
@@ -107,7 +103,7 @@ export async function getStaticProps() {
   const repos_url = user.repos_url;
   // const repoOverview= await fetchRepoData(repos_url);
   return {
-    props: { title: 'GitHub', user},
+    props: { title: "GitHub", user },
     revalidate: 10,
   };
 }
@@ -122,10 +118,11 @@ const fetchRepoData = async () => {
     let pullRequests = 0;
 
     for (const repo of repos) {
-      commits += repo.default_branch ? repo.default_branch.commit.commit.count : 0;
+      commits += repo.default_branch
+        ? repo.default_branch.commit.commit.count
+        : 0;
       pullRequests += repo.open_issues_count;
     }
-
 
     // Extract languages used and their contributions
     const langMap = new Map();
@@ -143,9 +140,9 @@ const fetchRepoData = async () => {
       }
     }
 
-    let languages =(Array.from(langMap.entries()));
+    let languages = Array.from(langMap.entries());
     return { commits, pullRequests, languages };
   } catch (error) {
-    console.error('Error fetching repository data:', error);
+    console.error("Error fetching repository data:", error);
   }
 };
