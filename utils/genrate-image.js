@@ -20,8 +20,8 @@ export const GenerateImage = (text) => {
   };
 
   const containerStyle = {
-    width: 450,
-    height: 200,
+    width: '100%',
+    height: '100%',
     backgroundColor: backgroundColor,
     display: 'flex',
     alignItems: 'center',

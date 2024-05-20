@@ -15,11 +15,11 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://piyushsingh.vercel.app',
+    url: 'https://piyush7833.vercel.app',
     site_name: 'Portfolio of Piyush Singh',
     images: [
       {
-        url: '/image/profile.jpg',
+        url: 'https://firebasestorage.googleapis.com/v0/b/munch-396608.appspot.com/o/utils%2Fphoto_2024-05-03_12-34-30.jpg?alt=media&token=ba6f84a7-2f79-4675-b8cd-c0609d09bb52',
         width: 800,
         height: 600,
         alt: 'Piyush Singh',
