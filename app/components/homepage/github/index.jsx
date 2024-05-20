@@ -27,7 +27,7 @@ const Github = async () => {
   const data = await getStaticProps();
   const userData = data.props.user;
   return (
-    <div id="" className="relative flex flex-col gap-10">
+    <div id="github" className="relative flex flex-col gap-10">
       <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
         <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
           GITHUB STATS
