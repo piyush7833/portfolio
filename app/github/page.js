@@ -10,7 +10,9 @@ async function getrepos() {
     }
   );
   if (!res.ok) {
-    throw new Error('Failed to fetch data')
+    console.log(res)
+    // throw new Error('Failed to fetch data')
+    
   }
 
   const data = await res.json();
@@ -19,7 +21,8 @@ async function getrepos() {
 
 async function page() {
   let repos = await getrepos();
-  repos = repos
+  console.log(repos)
+  repos = repos &&  repos
   .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
   return (
     <div className="py-8">
@@ -35,9 +38,11 @@ async function page() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 lg:gap-8 xl:gap-10">
         {
-          repos.map((repo, i) => (
+          repos ? repos.map((repo, i) => (
             <GitCard repo={repo} key={i} />
-          ))
+          )): <div className="flex justify-center items-center h-96 w-full">
+            <h1 className="text-2xl">No repositories found</h1>
+          </div>
         }
       </div>
     </div>

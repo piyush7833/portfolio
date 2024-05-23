@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <nav className="bg-[#212420] mx-auto px-6 sm:px-36 text-white fixed top-0 w-full z-[9999] backdrop:blur-md bg-opacity-50">
+    <nav className="bg-[#212420] mb-10 mx-auto px-6 sm:px-36 text-white fixed top-0 w-full z-[9999] backdrop:blur-md bg-opacity-50 ">
       <div className="flex items-center justify-between py-5">
         <div className="flex flex-shrink-0 items-center">
           <Link

@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Footer from './components/footer';
 import Navbar from './components/navbar';
 import { personalData } from '../utils/data/personal-data';
+import { Analytics } from "@vercel/analytics/react"
 import './css/card.scss';
 import './css/globals.scss';
 
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
         <Footer />
       </body>
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
+      <Analytics />
     </html>
   )
 };
