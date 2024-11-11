@@ -1,36 +1,69 @@
-import crefin from '/public/image/crefin.jpg';
-import realEstate from '/public/image/real-estate.jpg';
-import travel from '/public/image/travel.jpg';
-
 export const projectsData = [
     {
+        id: 2,
+        name: 'Auth Guardian',
+        description: "Auth Guardian is a Node.js library designed to provide authentication services with various social media platforms and additional methods like email, phone, passkey. It offers a seamless integration with Google, Facebook, LinkedIn, GitHub, and other popular platforms, enabling developers to easily incorporate authentication functionalities into their applications.",
+        
+        tools: ["Next.Js","Taliwind Css","Typescript","WebAuthn","JavaScript","OAuth","NodeJs", 'ExpressJs'],
+        role: 'Full-Stack Developer',
+        code: 'https://github.com/piyush7833/Auth-Guardian',
+        demo: 'https://github.com/piyush7833/Auth-Guardian',
+        status:"Under Development",
+        // image: crefin,
+    },
+    {
+        id: 5,
+        name: 'Chat-Api',
+        description: 'Chat-API is a Go-based RESTful API that allows users to chat, group chat, status, video call, call and save messages, media with preferred tags and manage reminders. The application uses PostgreSQL for data storage, Gorilla Mux for routing, Reddis and kafka for scalability.',
+        tools: ['Golang', 'Websockets', 'PostgreSQL', 'Gorilla Mux', 'Redis', 'Kafka', 'Docker', 'Kubernetes'],
+        code: 'https://github.com/piyush7833/Chat-Api',
+        role: 'Full Stack Developer',
+        demo: 'https://github.com/piyush7833/Chat-Api',
+        status:"Under Development",
+        // image: realEstate,
+    },
+    {
         id: 1,
+        name: 'LogiTrack',
+        description: "LogiTrack is a highly scalable logistics platform that connects users in need of transportation services for goods with a network of drivers. Designed for a global audience, the platform provides seamless booking, real-time vehicle tracking, and transparent pricing. Built to handle up to 10,000 requests per second, LogiTrack supports a user base of 50 million users and 100,000 drivers, ensuring efficient coordination across a large network.",
+        tools: ["Next.Js","Taliwind Css","Typescript","JavaScript","Kafka","Redis","Web-Sockets","docker","kubernetes","MongoDB","NodeJs","ExpressJs","Razorpay"],
+        role: 'Full-Stack Developer',
+        code: 'https://github.com/piyush7833/LogiTrack-Frontend',
+        demo: 'https://github.com/piyush7833/LogiTrack-Frontend',
+        status:"Completed",
+        // image: crefin,
+    },
+    {
+        id: 3,
         name: 'M.U.N.C.H. (Food Aggregator)',
         description: "MUNCH: A pioneering web app tailored for college students, MUNCH redefines campus dining. Seamlessly order delicious meals from your hostel, customize your preferences, and enjoy hassle-free transactions. Real-time tracking, dietary accommodations, and record maintenance ensure a delightful experience. Explore the future of food convenience!",
         tools: ["Next.Js","Taliwind Css","Typescript","Prisma","Postrgres Sql","Firebase Storage","Razorpay", 'GeminiAi API'],
         role: 'Full-Stack Developer',
         code: 'https://github.com/piyush7833/MUNCH',
         demo: 'https://munchh.vercel.app/',
+        status:"Completed",
         // image: crefin,
     },
     {
-        id: 2,
+        id: 4,
         name: 'IIITU Snapshots',
         description: 'IIITU Snapshot is a web app built to relive and celebrate your college memories through photos and videos. This platform offers a seamless way to capture, share, and engage with cherished moments from your college journey with a user-friendly interface, easy navigation, and a secure login system.',
         tools: ['React.JS', 'Tailwind CSS', "Firebase Storage", "Express.JS", "Node.JS","Razorpay", "MongoDB","Styled Components"],
         role: 'Full Stack Developer',
         code: 'https://github.com/piyush7833/iiitu-snapshots-frontend',
         demo: 'https://iiitu-snapshots.vercel.app/',
+        status:"Completed",
         // image: travel,
     },
     {
-        id: 3,
+        id: 6,
         name: 'IIITU Biometric Entry System',
         description: 'IIITU Biometric Entry System is a web app designed to streamline the entry and exit process for students and faculty members at the college campus. This platform offers a secure and efficient way to track entry and exit times, and ensure a safe and organized environment for all members of the college community.',
         tools: ['Html', 'CSS', 'JavaScript','Firebase',"App Script"],
         code: 'https://github.com/piyush7833/Biometric_Entry-Exit_IIITU',
         role: 'Full Stack Developer',
         demo: 'https://github.com/piyush7833/Biometric_Entry-Exit_IIITU',
+        status:"Completed",
         // image: realEstate,
     }
 ];
