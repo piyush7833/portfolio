@@ -19,6 +19,7 @@ export const personalData = {
   devUsername: "piyush7833",
   resume: "https://drive.google.com/file/d/1HAh6fGT0Kn70HpFLw1Z5ljSMyY439nl6/view",
   instagram:"https://www.instagram.com/_piyush7833/",
+  image: "https://firebasestorage.googleapis.com/v0/b/munch-396608.appspot.com/o/utils%2Fphoto_2024-05-03_12-34-30.jpg?alt=media&token=ba6f84a7-2f79-4675-b8cd-c0609d09bb52",
   achievements: [
     "5★ C++ (HackerRank)",
     "Solved 500+ problems on GFG, LeetCode, Codeforces, CodeChef, AtCoder, HackerRank",
