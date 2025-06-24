@@ -1,5 +1,12 @@
 export const experiences = [
   {
+    id: 4,
+    title: 'Software Developer Intern',
+    company: "Quizizz",
+    duration: "(Jan 2024 - Present)",
+    link: "https://www.quizizz.com/"
+  },
+  {
     id: 1,
     title: 'Frontend Developer',
     company: "Kubik labs",

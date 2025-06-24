@@ -1,11 +1,14 @@
 export const personalData = {
   name: "Piyush Singh",
   profile: '/image/profile.jpg',
-  designation: "Full-Stack Developer",
-  description: "My name is Piyush Singh. I am a professional and enthusiastic programmer in my daily life. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love almost all the stacks of web application development and love to make the web more open to the world. My core skill is based on JavaScript and I love to do most of the things using JavaScript. I am available for any kind of job opportunity that suits my skills and interests.",
-  skills:["ReactJS","NextJs","Flutter","NodeJs","ExpressJs","Go Lang","MongoDB","Firebase","PostgreSQL","GraphQL","REST API","TypeScript","JavaScript","HTML","CSS","SASS","TailwindCSS","Chakra-UI","Docker"],
+  designation: "Software Engineer | Full Stack Developer",
+  description: "Results-driven Software Engineer and Full Stack Developer with hands-on experience in building scalable, high-performance web applications. Specialized in React, Next.js, Node.js, TypeScript, and distributed systems. Proven track record of delivering impactful solutions in both startup and research environments. Passionate about learning, open source, and solving real-world problems.",
+  shortDescription: "Software Engineer and Full Stack Developer with expertise in React, Next.js, Node.js, TypeScript, and distributed systems. Open to new opportunities and freelance projects.",
+  skills:[
+    "React.js", "Next.js", "TypeScript", "JavaScript", "Node.js", "Express.js", "Go", "MongoDB", "PostgreSQL", "Redis", "Kafka", "Docker", "WebSockets", "ChakraUI", "Tailwind CSS", "CSS", "HTML", "SASS", "Flutter", "Firebase", "AWS", "GCP", "Linux", "Git", "Jenkins", "MatLab", "Android Studio", "VS Code"
+  ],
   email: 'ps671248@gmail.com',
-  phone: '+917310094880',
+  phone: '+91-7310094880',
   address: 'Gyanpur, Bhadohi, Uttar Pradesh, India',
   github: 'https://github.com/piyush7833',
   gfg: 'https://www.geeksforgeeks.org/user/piyush7833/?utm_source=geeksforgeeks&utm_medium=my_profile&utm_campaign=auth_user',
@@ -14,6 +17,44 @@ export const personalData = {
   stackOverflow: 'https://stackoverflow.com/users/17518371/piyush',
   leetcode: "https://leetcode.com/u/piyush7833/",
   devUsername: "piyush7833",
-  resume: "https://drive.google.com/file/d/1RPUwWPTQrvq5fCetyQpFHLMF4g1LQAaa/view?usp=sharing",
-  instagram:"https://www.instagram.com/_piyush7833/"
+  resume: "https://drive.google.com/file/d/1HAh6fGT0Kn70HpFLw1Z5ljSMyY439nl6/view",
+  instagram:"https://www.instagram.com/_piyush7833/",
+  achievements: [
+    "5★ C++ (HackerRank)",
+    "Solved 500+ problems on GFG, LeetCode, Codeforces, CodeChef, AtCoder, HackerRank",
+    "Global Rank 1 in GFG Weekly Coding Contest",
+    "Top 1% in GFG Monthly Coding Contest",
+    "Global Rank 2 in AtCoder Beginner Contest",
+    "Winner, IIITU Biometric Entry-Exit Hackathon (Jan 2022)"
+  ],
+  // SEO Keywords
+  seoKeywords: [
+    "Piyush Singh",
+    "Piyush",
+    "software developer",
+    "full stack developer", 
+    "frontend developer",
+    "backend developer",
+    "freelance developer",
+    "React developer",
+    "Next.js developer",
+    "Node.js developer",
+    "JavaScript developer",
+    "TypeScript developer",
+    "web developer",
+    "freelance software developer",
+    "hire developer",
+    "remote developer",
+    "UI/UX developer",
+    "mobile app developer",
+    "Flutter developer",
+    "MongoDB developer",
+    "PostgreSQL developer",
+    "GraphQL developer",
+    "REST API developer",
+    "Docker developer",
+    "Firebase developer"
+  ],
+  upwork: "https://www.upwork.com/freelancers/~01203b6730f59d80a6",
+  fiverr: "https://www.fiverr.com/piyushsingh7833"
 }

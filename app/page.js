@@ -6,18 +6,67 @@ import HeroSection from "./components/homepage/hero-section";
 import Projects from "./components/homepage/projects";
 import Github from "./components/homepage/github";
 import Skills from "./components/homepage/skills";
+import FreelanceSection from "./components/homepage/freelance/index";
+import { personalData } from "../utils/data/personal-data";
+
+export const metadata = {
+  title: 'Piyush Singh - Full Stack Developer | Frontend Developer | Backend Developer | Freelance Developer',
+  description: 'Piyush Singh is a professional Full Stack Developer, Frontend Developer, and Backend Developer available for freelance work. Specializing in React, Next.js, Node.js, and modern web technologies. Hire Piyush for your next software development project.',
+  keywords: personalData.seoKeywords.join(', '),
+  openGraph: {
+    title: 'Piyush Singh - Full Stack Developer | Frontend & Backend Developer | Freelance',
+    description: 'Professional Full Stack Developer Piyush Singh specializing in React, Next.js, Node.js. Available for freelance projects. Expert in frontend and backend development.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Piyush Singh - Full Stack Developer | Frontend & Backend Developer',
+    description: 'Professional Full Stack Developer Piyush Singh specializing in React, Next.js, Node.js. Available for freelance projects.',
+  },
+};
 
 export default async function Home() {
   return (
     <>
-      <HeroSection />
-      <AboutSection />
-      <Experience />
-      <Skills />
-      <Projects />
-      <Education />
-      <Github/>
-      <ContactSection />
+      {/* SEO-optimized semantic structure */}
+      <header>
+        <HeroSection />
+      </header>
+      
+      <main>
+        <section id="about" aria-label="About Piyush Singh">
+          <AboutSection />
+        </section>
+
+        <section id="freelance" aria-label="Freelance Availability">
+          <FreelanceSection />
+        </section>
+        
+        <section id="experience" aria-label="Work Experience">
+          <Experience />
+        </section>
+        
+        <section id="skills" aria-label="Technical Skills">
+          <Skills />
+        </section>
+        
+        <section id="projects" aria-label="Portfolio Projects">
+          <Projects />
+        </section>
+        
+        <section id="education" aria-label="Education">
+          <Education />
+        </section>
+        
+        <section id="github" aria-label="GitHub Activity">
+          <Github/>
+        </section>
+        
+        <section id="contact" aria-label="Contact Information">
+          <ContactSection />
+        </section>
+      </main>
     </>
   )
 };

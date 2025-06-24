@@ -19,6 +19,7 @@ function ContactWithCaptcha() {
     email: false,
     required: false,
   });
+  const [loading, setLoading] = useState(false);
 
   const checkRequired = () => {
     if (input.email && input.message && input.name) {
@@ -56,6 +57,7 @@ function ContactWithCaptcha() {
     const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
 
+    setLoading(true);
     try {
       const res = await emailjs.send(serviceID, templateID, input, options);
 
@@ -70,7 +72,15 @@ function ContactWithCaptcha() {
     } catch (error) {
       toast.error(error?.text || error);
     };
+    setLoading(false);
   };
+
+  const Spinner = () => (
+    <svg className="animate-spin h-4 w-4 text-white" viewBox="0 0 24 24">
+      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+    </svg>
+  );
 
   return (
     <div className="">
@@ -138,12 +148,13 @@ function ContactWithCaptcha() {
               </p>
             }
             <button
-              className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
+              className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold disabled:opacity-60 disabled:cursor-not-allowed"
               role="button"
               onClick={handleSendMail}
+              disabled={loading}
             >
-              <span>Send Message</span>
-              <TbMailForward className="mt-1" size={18} />
+              {loading ? <Spinner /> : <span>Send Message</span>}
+              {!loading && <TbMailForward className="mt-1" size={18} />}
             </button>
           </div>
         </div>

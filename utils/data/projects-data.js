@@ -1,5 +1,16 @@
 export const projectsData = [
     {
+        id: 1,
+        name: 'LogiTrack',
+        description: "LogiTrack is a highly scalable logistics platform that connects users in need of transportation services for goods with a network of drivers. Designed for a global audience, the platform provides seamless booking, real-time vehicle tracking, and transparent pricing. Built to handle up to 10,000 requests per second, LogiTrack supports a user base of 50 million users and 100,000 drivers, ensuring efficient coordination across a large network.",
+        tools: ["Next.Js","Taliwind Css","Typescript","JavaScript","Kafka","Redis","Web-Sockets","docker","kubernetes","MongoDB","NodeJs","ExpressJs","Razorpay"],
+        role: 'Full-Stack Developer',
+        code: 'https://github.com/piyush7833/LogiTrack-Frontend',
+        demo: 'https://github.com/piyush7833/LogiTrack-Frontend',
+        status:"Completed",
+        // image: crefin,
+    },
+     {
         id: 2,
         name: 'Auth Guardian',
         description: "Auth Guardian is a Node.js library designed to provide authentication services with various social media platforms and additional methods like email, phone, passkey. It offers a seamless integration with Google, Facebook, LinkedIn, GitHub, and other popular platforms, enabling developers to easily incorporate authentication functionalities into their applications.",
@@ -22,17 +33,7 @@ export const projectsData = [
         status:"Under Development",
         // image: realEstate,
     },
-    {
-        id: 1,
-        name: 'LogiTrack',
-        description: "LogiTrack is a highly scalable logistics platform that connects users in need of transportation services for goods with a network of drivers. Designed for a global audience, the platform provides seamless booking, real-time vehicle tracking, and transparent pricing. Built to handle up to 10,000 requests per second, LogiTrack supports a user base of 50 million users and 100,000 drivers, ensuring efficient coordination across a large network.",
-        tools: ["Next.Js","Taliwind Css","Typescript","JavaScript","Kafka","Redis","Web-Sockets","docker","kubernetes","MongoDB","NodeJs","ExpressJs","Razorpay"],
-        role: 'Full-Stack Developer',
-        code: 'https://github.com/piyush7833/LogiTrack-Frontend',
-        demo: 'https://github.com/piyush7833/LogiTrack-Frontend',
-        status:"Completed",
-        // image: crefin,
-    },
+
     {
         id: 3,
         name: 'M.U.N.C.H. (Food Aggregator)',
