@@ -72,7 +72,7 @@ export default function FreelanceSection() {
           <h3 className="font-extrabold text-lg md:text-xl text-white text-center leading-tight">Hire Me for Freelance Software Development</h3>
           <p className="text-[#16f2b3] text-xs md:text-base text-center uppercase font-semibold tracking-wide">Available Worldwide for Web, Backend, and Consulting Projects</p>
           <p className="text-gray-200 text-xs md:text-base text-center max-w-xl">
-            Looking for a reliable freelance developer? I offer <strong>custom web development</strong>, <strong>backend API design</strong>, <strong>performance optimization</strong>, and <strong>technical consulting</strong> for startups, businesses, and individuals. Let's build something great together!
+            Looking for a reliable freelance developer? I offer <strong>custom web development</strong>, <strong>backend API design</strong>, <strong>performance optimization</strong>, and <strong>technical consulting</strong> for startups, businesses, and individuals. Let&apos;s build something great together!
           </p>
           <ul className="bg-[#181c2f]/80 border border-[#25213b] rounded-lg shadow p-2 w-full max-w-xl grid grid-cols-1 sm:grid-cols-2 gap-1 text-xs md:text-sm text-gray-200 list-disc list-inside">
             <li>Full Stack Web App Development</li>
@@ -123,7 +123,7 @@ export default function FreelanceSection() {
           </div>
           <div className="mt-2 w-full flex justify-center">
             <a
-              href={`mailto:${personalData.email}?subject=Let's%20Start%20Your%20Project`}
+              href={`mailto:${personalData.email}?subject=Let&#39;s%20Start%20Your%20Project`}
               className="inline-block bg-gradient-to-r from-pink-500 to-violet-600 hover:from-violet-600 hover:to-pink-500 text-white font-bold py-2 px-6 rounded-full text-xs md:text-base shadow-lg transition animate-pulse"
             >
               Get a Free Quote Now

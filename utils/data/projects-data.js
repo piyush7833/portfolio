@@ -19,7 +19,7 @@ export const projectsData = [
         role: 'Full-Stack Developer',
         code: 'https://github.com/piyush7833/Auth-Guardian',
         demo: 'https://github.com/piyush7833/Auth-Guardian',
-        status:"Under Development",
+        status:'Completed',
         // image: crefin,
     },
     {
@@ -30,7 +30,7 @@ export const projectsData = [
         code: 'https://github.com/piyush7833/Chat-Api',
         role: 'Full Stack Developer',
         demo: 'https://github.com/piyush7833/Chat-Api',
-        status:"Under Development",
+        status:"Completed",
         // image: realEstate,
     },
 
